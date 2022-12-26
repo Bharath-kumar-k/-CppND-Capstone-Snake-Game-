@@ -14,10 +14,13 @@ class Game {
            std::size_t target_frame_duration);
   int GetScore() const;
   int GetSize() const;
+  int GetLevel() const;
 
  private:
   Snake snake;
+  int level;
   SDL_Point food;
+  std::vector<SDL_Point> obstruction;
 
   std::random_device dev;
   std::mt19937 engine;
@@ -27,6 +30,7 @@ class Game {
   int score{0};
 
   void PlaceFood();
+  void PlaceObstruction();
   void Update();
 };
 
