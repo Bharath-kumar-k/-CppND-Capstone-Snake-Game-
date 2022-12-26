@@ -15,27 +15,41 @@ void Controller::HandleInput(bool &running, Snake &snake) const {
     if (e.type == SDL_QUIT) {
       running = false;
     } else if (e.type == SDL_KEYDOWN) {
-      switch (e.key.keysym.sym) {
-        case SDLK_UP:
+      if(e.key.keysym.sym == _Up){
           ChangeDirection(snake, Snake::Direction::kUp,
                           Snake::Direction::kDown);
-          break;
-
-        case SDLK_DOWN:
+      }else if (e.key.keysym.sym == _Down){
           ChangeDirection(snake, Snake::Direction::kDown,
                           Snake::Direction::kUp);
-          break;
-
-        case SDLK_LEFT:
+      }else if (e.key.keysym.sym == _Right){
           ChangeDirection(snake, Snake::Direction::kLeft,
                           Snake::Direction::kRight);
-          break;
-
-        case SDLK_RIGHT:
+      }else if (e.key.keysym.sym == _Left){
           ChangeDirection(snake, Snake::Direction::kRight,
                           Snake::Direction::kLeft);
-          break;
       }
+
+      // switch (e.key.keysym.sym) {
+      //   case _Up:
+      //     ChangeDirection(snake, Snake::Direction::kUp,
+      //                     Snake::Direction::kDown);
+      //     break;
+
+      //   case _Down:
+      //     ChangeDirection(snake, Snake::Direction::kDown,
+      //                     Snake::Direction::kUp);
+      //     break;
+
+      //   case _Right:
+      //     ChangeDirection(snake, Snake::Direction::kLeft,
+      //                     Snake::Direction::kRight);
+      //     break;
+
+      //   case _Left:
+      //     ChangeDirection(snake, Snake::Direction::kRight,
+      //                     Snake::Direction::kLeft);
+      //     break;
+      // }
     }
   }
-}
+} 

@@ -2,6 +2,9 @@
 #define GAME_H
 
 #include <random>
+#include <thread>
+#include <mutex>
+
 #include "SDL.h"
 #include "controller.h"
 #include "renderer.h"
@@ -10,7 +13,7 @@
 class Game {
  public:
   Game(std::size_t grid_width, std::size_t grid_height);
-  void Run(Controller const &controller, Renderer &renderer,
+  void Run(Renderer &renderer,
            std::size_t target_frame_duration);
   int GetScore() const;
   int GetSize() const;
@@ -18,6 +21,7 @@ class Game {
 
  private:
   Snake snake;
+  Snake l_snake;
   int level;
   SDL_Point food;
   std::vector<SDL_Point> obstruction;

@@ -21,6 +21,10 @@ SDL.h
 /home/bharath.kumar/code/CppND-Capstone-Snake-Game/src/game.h
 random
 -
+thread
+-
+mutex
+-
 SDL.h
 /home/bharath.kumar/code/CppND-Capstone-Snake-Game/src/SDL.h
 controller.h
@@ -29,16 +33,6 @@ renderer.h
 /home/bharath.kumar/code/CppND-Capstone-Snake-Game/src/renderer.h
 snake.h
 /home/bharath.kumar/code/CppND-Capstone-Snake-Game/src/snake.h
-
-/home/bharath.kumar/code/CppND-Capstone-Snake-Game/src/main.cpp
-iostream
--
-controller.h
-/home/bharath.kumar/code/CppND-Capstone-Snake-Game/src/controller.h
-game.h
-/home/bharath.kumar/code/CppND-Capstone-Snake-Game/src/game.h
-renderer.h
-/home/bharath.kumar/code/CppND-Capstone-Snake-Game/src/renderer.h
 
 /home/bharath.kumar/code/CppND-Capstone-Snake-Game/src/renderer.h
 vector
@@ -50,6 +44,8 @@ snake.h
 
 /home/bharath.kumar/code/CppND-Capstone-Snake-Game/src/snake.h
 vector
+-
+algorithm
 -
 SDL.h
 /home/bharath.kumar/code/CppND-Capstone-Snake-Game/src/SDL.h
